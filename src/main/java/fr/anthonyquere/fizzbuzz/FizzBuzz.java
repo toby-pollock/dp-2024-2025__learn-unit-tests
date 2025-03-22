@@ -9,6 +9,22 @@ public class FizzBuzz {
     }
 
     public static List<String> startFizzBuzz(int count) {
-        return null;
+        if (count == 0) {
+            return List.of();
+        }
+
+        String[] fizzBuzzArray = new String[count];
+        for (int i = 0; i < count; i++) {
+            if ((i+1)%3 == 0 && (i+1)%5 == 0){
+                fizzBuzzArray[i] = "FizzBuzz";
+            } else if ((i+1)%3 == 0){
+                fizzBuzzArray[i] = "Fizz";
+            } else if ((i+1)%5 == 0) {
+                fizzBuzzArray[i] = "Buzz";
+            } else {
+                fizzBuzzArray[i] = "";
+            }
+        }
+        return List.of(fizzBuzzArray);
     }
 }
