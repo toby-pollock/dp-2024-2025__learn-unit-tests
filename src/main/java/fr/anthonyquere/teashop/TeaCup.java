@@ -34,4 +34,18 @@ public class TeaCup {
     private int getCurrentTimeInSeconds() {
         return (int) (System.currentTimeMillis() / 1000);
     }
+
+
+    // Ajout de getters pour les unit tests
+    public boolean isEmpty() {
+        return isEmpty;
+    }
+
+    public int getCurrentTemperatureCelsius() {
+        return currentTemperatureCelsius;
+    }
+
+    public Tea getTea(){
+        return tea;
+    }
 }
